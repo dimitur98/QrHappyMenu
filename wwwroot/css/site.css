@@ -56,35 +56,31 @@ button.accept-policy {
 html {
     position: relative;
     min-height: 100%;
+   
 }
 
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    background-image: url('https://res.cloudinary.com/dimitur98/image/upload/v1607965786/8brQ5a_vf0huj.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 .menuImg {
-    border-radius:50%;
-    height: 75%;
-    width: 80%;
-}
-.column {
-    float: left;
-    width: 33.33%;
-    padding-bottom: 40px;
+    max-width:200px;
+    width:100%;
+    height:auto;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 .logo {
     height: 150px;
     width: 200px;
@@ -96,6 +92,82 @@ body {
 .menuText {
     font-weight: bold;
     font-size:25px;
-    color:red;
+    color:black;
+}
+.centerText {
+    text-align:center;
+}
+.center {
+    margin: auto;
+    width: 60%;
 }
 
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.column {
+    flex: 16.6%;
+    max-width: 16.6%;
+}
+.column img {
+    vertical-align: middle;
+    width: 100%;
+    height:200px;
+}
+@media screen and (max-width: 1025px) {
+    .column {
+        flex: 33.3%;
+        max-width: 33.3%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.rowM {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columnM {
+    flex: 25%;
+    max-width: 25%;
+}
+
+    .columnM img {
+        vertical-align: middle;
+        width: 100%;
+    }
+
+@media screen and (max-width: 1025px) {
+    .columnM {
+        flex: 33.3%;
+        max-width: 33.3%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .columnM {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .columnM {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
